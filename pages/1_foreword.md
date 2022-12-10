@@ -1,3 +1,11 @@
+---
+layout: default
+title: Foreword
+parent: Home
+nav_order: 1
+---
+
+
 ## 1. Foreword
 
 The intent of this document is to provide instructions for the replication of the study described in “A Socio-technical Perspective on Software Vulnerabilities: A Causal Analysis” hereafter called the “Original Study.”
