@@ -25,7 +25,7 @@ A more technical discussion of how Causal Discovery and Causal Inference work ca
  * Epidemiological studies, where how one establishes medical facts, guidance, and policy can be, literally, a matter of life or death
  * Economics science, where major decisions are made regarding American and International economics policy.
 
-For just two recent examples, we cite a paper by Miguel Hernán that has been described as one of the most influential papers in 100 years of the American Journal of Epidemiology [2, 3]; and the awarding of the 2021 Nobel Prize for Economics to Angrist and Imbens [4]
+For just two recent examples, we cite a paper by Miguel Hernán that has been described as one of the most influential papers in 100 years of the American Journal of Epidemiology [2, 3]; and the awarding of the 2021 Nobel Prize for Economics to Angrist and Imbens [4].
 
 However, for our purposes, this may prove a sufficient explanation:
 
