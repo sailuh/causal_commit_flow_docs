@@ -2,10 +2,10 @@
 layout: default
 title: Conclusion
 parent: Home
-nav_order: 12
+nav_order: 11
 ---
 
-## 12. Conclusion
+## 11. Conclusion
 
 Even though we weren’t able to exactly replicate the original study, we did derive very similar conclusions: social smells impact the current and next time period(s). Almost any measure of work-rate considered can be controlled (we considered 6 different types of work rate) via one or more social smells in the current or previous time period. Social smells do impact work rates. Even when controlling for their effects in the next time period, social smells in this time period to affect work rates in the next time period.
 We modified the methodology from what was written in the original study. Rather than:
