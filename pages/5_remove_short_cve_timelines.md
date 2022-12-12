@@ -5,6 +5,7 @@ parent: Home
 nav_order: 5
 ---
 
+## 5. Remove CVEs Whose Remediation Timeline is Too Short
 
  * Prune away any CVEs (i.e., their associated records from the dataset) having insufficient representation in our dataset for discovering casual relationships specifically for that CVE.
     * If a CVE’s remediation timeline is too short then key underlying causal relationships cannot be discovered or any that are discovered will not be as credible (more likely to be false positives). Within our dataset, seven CVEs are only represented by seven time periods or less (six, after deleting the last row of each CVE timeline as a last step of appending variables from the next time period). Discovering a structured causal model from such a small sample that faithfully represents the underlying direct causal relationships (relative to the variables collected) might be difficult. Thus, these CVEs with only seven time periods are a good candidate for deletion. 
