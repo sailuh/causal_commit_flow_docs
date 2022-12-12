@@ -6,7 +6,7 @@ nav_order: 4
 ---
 
 
-# 4. Appending Variables Representing the Next Time Period 
+## 4. Appending Variables Representing the Next Time Period 
 
 Append to the dataset these additional 11 variables representing the impact on the next time period: org_silo2, mis_link2, silence2, congruence2, communicate2, code_dev2, file2, mail_dev2, thread2, commit2, churn2.
 
