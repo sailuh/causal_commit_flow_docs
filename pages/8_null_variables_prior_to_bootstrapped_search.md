@@ -5,7 +5,7 @@ parent: Home
 nav_order: 8
 ---
 
-## Determining Which Null Variables to Add Prior to Bootstrapped Search
+## 8. Determining Which Null Variables to Add Prior to Bootstrapped Search
 
 When a dataset doesn’t have too many variables, we usually create one null variable for each existing variable; however, with 133 variables, a bootstrapped search could take a while and so might interpreting its results, and so in our situation we will generate null variables for only a subset of the original variables. But which subset? Taking inventory of our variables, we have 133 variables consisting of the Start variable (the date when a time period started), the set of 9 sociotechnical and output variables for the current time period, the corresponding set of 9 variables for the next time period, and the 114 binarized variables (id-of-the-CVE-being-remediated indicator variables). We will create a null variable for each of the first 19 variables but only a small selection of the 114 binarized variables. 
 
