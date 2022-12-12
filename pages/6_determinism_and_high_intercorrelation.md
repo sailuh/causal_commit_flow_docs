@@ -5,6 +5,8 @@ parent: Home
 nav_order: 6
 ---
 
+## 6. Addressing Determinism and High Intercorrelation Among Variables
+
 When the same or similar feature is measured more than one way within a time period, it can create variables that are highly correlated to each other. Prior to applying causal discovery, we will want to combine or remove such variables from the dataset. When a pair of variables are measuring pretty much the same feature of a situation, the causal discovery algorithm we use will tend to “reward” only one of the two variables with a causal relationship with a third variable. In other words, the set of causal relationships between those two highly-correlated variables and any other variable in the dataset will be split between the two variables, making interpretation of the results of causal discovery more challenging. Specific examples, some of which lead to a change in the dataset include:
 
  * Three variables “activity_0,” “activity_2,” and “commit” all gauge the amount of commit activity that occurs within a time period. Which of these three variables should we keep, or should we combine them into a new composite variable that better represents the amount of commit activity within a time period? In this case, the solution is very simple: “activity_0” and “activity_2” are fully determined by the number of commits (“commit”) and thus we can simply delete the less informative versions of “commit” from the dataset. In other words, we simply delete “activity_0” and “activity_2.”
