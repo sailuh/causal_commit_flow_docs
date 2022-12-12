@@ -5,6 +5,8 @@ parent: Home
 nav_order: 7
 ---
 
+## 7. Binarize CVE_ID
+
 (This is sometimes referred to as “hot encoding” in the data science literature.)
 
 If we want to understand the impact of sociotechnical behaviors from one time period on the next within the context of a CVE remediation timeline, we will want to treat each CVE remediation as its own recurring situation that we want to apply causal discovery to. Different CVEs involve different problems to solve, which may require different solution approaches and different individuals interacting differently to do the remediation. But within a CVE remediation timeline, we’re likely to have a more shared context for sociotechnical behaviors from one time period to impact the work activities from that and the next time periods.
