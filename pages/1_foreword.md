@@ -40,7 +40,7 @@ And for these reasons, we employed Causal Discovery in our analysis of the OpenS
 ## 1.3 References
 
 1. Muthén, L. K., & Muthén, B. O. (1998-2017). Mplus User's Guide. Eighth Edition. Los Angeles, CA: Muthén & Muthén.))
-2. American Journal of Epidemiology, 2021. “100 Years of the American Journal of Epidemiology.” 100 years | American Journal of Epidemiology | Oxford Academic (oup.com)
+2. American Journal of Epidemiology, 2021. “100 Years of the American Journal of Epidemiology.” 100 years, American Journal of Epidemiology, Oxford Academic (oup.com)
 3. Miguel A. Hernán, Sonia Hernández-Díaz, Martha M. Werler, Allen A. Mitchell, Causal Knowledge as a Prerequisite for Confounding Evaluation: An Application to Birth Defects Epidemiology, American Journal of Epidemiology, Volume 155, Issue 2, 15 January 2002, Pages 176–184, https://doi.org/10.1093/aje/155.2.176 (Selected as one of the most influential papers in the history of the journal.)
 4. Nobel Prize Organization. “Press Release: The Prize in Economic Sciences.” Awarded to Joshua D. Angrist and Guido W. Imbens “for their methodological contributions to the analysis of causal relationships.” The Prize in Economic Sciences 2021 - Press release - NobelPrize.org
 5. Wikimedia Foundation. “Simpson’s Paradox.” https://en.wikipedia.org/wiki/Simpson%27s_paradox 
