@@ -38,7 +38,7 @@ To perform the initial screen configure Tetrad as follows:
 
 Here’s a screenshot of the initial screen Tetrad session showing the Data box on top and the Search box below that with an arrow from the Data box to the Search box. Using the context menu on the Data box, the Data box name was changed to reflect the name of the CSV file read in (which is what made the Data box so wide):
 
-![Section 8 Figure 1](img/sec_8_null_variable_prior_to_bootstrap_fig_1.png?raw=true "Title")
+![Section 8 Figure 1](../img/sec_8_null_variable_prior_to_bootstrap_fig_1.png?raw=true "Title")
 
 
 Inside the Search box, configure the search as follows:
@@ -73,13 +73,13 @@ Inside the Search box, configure the search as follows:
 
 Here are screenshots of the search hyperparameter settings (Tetrad version 7.1.2-2):
 
-![Section 8 Figure 2](img/sec_8_null_variable_prior_to_bootstrap_fig_2.png?raw=true "Title")
+![Section 8 Figure 2](../img/sec_8_null_variable_prior_to_bootstrap_fig_2.png?raw=true "Title")
 
-![Section 8 Figure 3](img/sec_8_null_variable_prior_to_bootstrap_fig_3.png?raw=true "Title")
+![Section 8 Figure 3](../img/sec_8_null_variable_prior_to_bootstrap_fig_3.png?raw=true "Title")
 
 Applying causal discovery to the original dataset configured as in the above bulleted list produces a busy search graph but if we only display those binarized variables (the variables whose names match the b_* regex pattern) that have formed edges with any of the non-binarized variables in the original dataset, we obtain a simpler graph that looks something like this (after moving the variables around or even away from where the screenshot will be “snapped” so that the graph can be read more easily):
 
-![Section 8 Figure 4](img/sec_8_null_variable_prior_to_bootstrap_fig_4.png?raw=true "Title")
+![Section 8 Figure 4](../img/sec_8_null_variable_prior_to_bootstrap_fig_4.png?raw=true "Title")
 
 
 Some comments:
