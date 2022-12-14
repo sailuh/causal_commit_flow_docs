@@ -118,7 +118,7 @@ Where `bin-dataset.csv` is the output of the previous python program run.
 
 Here is the program listing: 
 
-```
+```diff
 + csv-add-null.v020article.py
 ```
 
