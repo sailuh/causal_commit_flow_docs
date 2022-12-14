@@ -1,17 +1,28 @@
 ---
 layout: default
-title: Null Variables Prior to Bootstrapped Search
+title: Null Features Prior to Bootstrapped Search
 parent: Home
 nav_order: 8
 ---
 
-## 8. Determining Which Null Variables to Add Prior to Bootstrapped Search
+## 8. Determining Which Null Features to Add Prior to Bootstrapped Search
 
-When a dataset doesn’t have too many variables, we usually create one null variable for each existing variable; however, with 133 variables, a bootstrapped search could take a while and so might interpreting its results, and so in our situation we will generate null variables for only a subset of the original variables. But which subset? Taking inventory of our variables, we have 133 variables consisting of the Start variable (the date when a time period started), the set of 9 sociotechnical and output variables for the current time period, the corresponding set of 9 variables for the next time period, and the 114 binarized variables (id-of-the-CVE-being-remediated indicator variables). We will create a null variable for each of the first 19 variables but only a small selection of the 114 binarized variables. 
+### 8.1 Null Features
 
-First, we conduct an initial screen to divide CVEs into two subsets: (1) those CVEs that seem to have no notable causally idiosyncratic role (their causal relationship to socio-technical variables and worker-rate variables seems about the same as most other CVEs)—for such variables we won’t bother to generate a null variable as there’s perhaps nothing too unique going on that’s notably different from any other CVE from a causal perspective and thus not much to be gained from creating a corresponding null variable; and (2) those CVEs that do seem to be causally interesting and different from the others.
+When a dataset doesn’t have too many features, we usually create one null feature for each existing feature; however, with 133 features, a bootstrapped search could become prohibitively time expensive, including its results interpretation. Therefore, we will generate null features for only a subset of the original features. But which subset? Taking inventory of our features, we have 133 features: 
 
-Toward splitting the CVEs in the above-described way, we perform an initial screen. This initial screening will also involve bootstrapping but here the intent is just to give multiple chances for a causal edge to appear with the binarized (CVE id) variable representing that CVE. For example, we might perform Causal Discovery with bootstrapping set to just 10 samples, and then drop any variable that fails to have any edge whatsoever in this quick search across 10 samples. Before presenting the results of this, we backup to discuss the tool being used.
+ * Start feature (the date when a time period started)
+ * Set of 9 sociotechnical and output features for the current time period 
+ * Set of 9 features for the next time period
+ * Set of 114 binarized features (id-of-the-CVE-timeline indicator features) 
+ 
+We will create a null feature for each of the first 19 features but only a small selection of the 114 binarized features. 
+
+First, we conduct an initial screen to divide CVEs into two subsets: (1) those CVEs that seem to have no notable causally idiosyncratic role (their causal relationship to socio-technical features and worker-rate features seems about the same as most other CVEs)—for such features we won’t bother to generate a null feature as there’s perhaps nothing too unique going on that’s notably different from any other CVE from a causal perspective and thus not much to be gained from creating a corresponding null feature; and (2) those CVEs that do seem to be causally interesting and different from the others.
+
+Toward splitting the CVEs in the above-described way, we perform an initial screen. This initial screening will also involve bootstrapping but here the intent is just to give multiple chances for a causal edge to appear with the binarized (CVE id) feature representing that CVE. For example, we might perform Causal Discovery with bootstrapping set to just 10 samples, and then drop any feature that fails to have any edge whatsoever in this quick search across 10 samples. Before presenting the results of this, we backup to discuss the tool being used.
+
+### 8.2. Tetrad
 
 To facilitate causal discovery (also known as “search”) throughout, we employed the Tetrad tool maintained at Carnegie Mellon University and the University of Pittsburgh. Various resources provide detailed descriptions of the tool and various features and algorithms, including these:
 
@@ -21,20 +32,24 @@ To facilitate causal discovery (also known as “search”) throughout, we emplo
 
 The final resource listed above, the Tetrad User Manual, is particularly detailed about how to use the Tetrad user interface, load a dataset, specify knowledge, run the algorithms, and import in (export out) a graph.
 
-From a replication perspective, Tetrad can be challenging to use because often there’s often no upward compatibility and later releases of the Java Runtime Environment (JRE) sometimes deprecate features of earlier releases on which an earlier release of Tetrad depends and so by the time an article is published, the replication package may no longer work as described. The solution is to indicate not only which version of Tetrad but along with it which version of the Java Runtime Environment (JRE) is needed to open a previously-saved session of Tetrad that is part of a replication package. So, in this replication package we include characterizations of both the Tetrad JAR file to use and JRE to use:
+From a replication perspective, Tetrad can be challenging to use because often there’s no upward compatibility and later releases of the Java Runtime Environment (JRE) sometimes deprecate features of earlier releases on which an earlier release of Tetrad depends and so by the time an article is published, the replication package may no longer work as described. The solution is to indicate not only which version of Tetrad but along with it which version of the Java Runtime Environment (JRE) is needed to open a previously-saved session of Tetrad that is part of a replication package. So, in this replication package we include characterizations of both the Tetrad JAR file to use and JRE to use:
 
- * Direct link to Tetrad 7.1.2-2 release
- * In case that fails, here’s the repository with that JAR file: Index of /repositories/releases/io/github/cmu-phil/tetrad-gui/7.1.2-2 (sonatype.org)
- * And here’s the hash for the last commit for Tetrad 7.1.2-2 release: https://github.com/cmu-phil/tetrad/commit/13b64f5334c4ceea5c497f675421cdb93b1c5fec  
+ * [Tetrad 7.1.2-2 release](https://s01.oss.sonatype.org/content/repositories/releases/io/github/cmu-phil/tetrad-gui/)
+    * Last modified: `Wed Jun 08 23:54:41 UTC 2022` 
+ * If the aforementioned Jar is not available, the repository with that JAR file is: 
+    * `Index of /repositories/releases/io/github/cmu-phil/tetrad-gui/7.1.2-2 (sonatype.org)`
  * Java Runtime Environment version: Java(TM) SE Runtime Environment (build 18+36-2087)
     * (More completely: Java HotSpot(TM) 64-Bit Server VM (build 18+36-2087, mixed mode, sharing)
+ * If that also fails, the hash for the last commit for Tetrad 7.1.2-2 release: 
+    * https://github.com/cmu-phil/tetrad/commit/13b64f5334c4ceea5c497f675421cdb93b1c5fec  
         
 The reader may choose to replicate the analyses that follow, forgoing the provided Tetrad sessions that accompany this replication package but rather rebuild a session themselves with whatever version of Tetrad they please, and that, in general, should be fine. Of course, while results should be comparable, it’s possible that something material might have changed between versions of Tetrad or JRE releases. For this reason, we’ve tried to thoroughly specify the particular hyperparameter settings and versions used of Tetrad and the JRE.
+
 To perform the initial screen configure Tetrad as follows:
-•	Insert a Data box and load in the 133-variable dataset (“bin-openssl_social_smells…” – see above for full filename).
-•	Insert a Search box and connect the Data box to the Search box.
-•	No knowledge box is used for this initial application of causal discovery. Therefore, don’t be surprised if some directed edges have a reverse orientation (what should be the edge’s source appears as its target, and conversely).
-•	(Don’t forget you can refer to the materials hyperlinked above for how to insert the data box and search box and indeed for subsequent operations in the GUI.)
+ * Insert a Data box and load in the 133-variable dataset (“bin-openssl_social_smells…” – see above for full filename).
+ * Insert a Search box and connect the Data box to the Search box.
+ * No knowledge box is used for this initial application of causal discovery. Therefore, don’t be surprised if some directed edges have a reverse orientation (what should be the edge’s source appears as its target, and conversely).
+ * (Don’t forget you can refer to the materials hyperlinked above for how to insert the data box and search box and indeed for subsequent operations in the GUI.)
 
 Here’s a screenshot of the initial screen Tetrad session showing the Data box on top and the Search box below that with an arrow from the Data box to the Search box. Using the context menu on the Data box, the Data box name was changed to reflect the name of the CSV file read in (which is what made the Data box so wide):
 
@@ -103,8 +118,8 @@ Where `bin-dataset.csv` is the output of the previous python program run.
 
 Here is the program listing: 
 
-```+
-csv-add-null.v020article.py
+```
++ csv-add-null.v020article.py
 ```
 
 Here is the resulting dataset, with its 266 variables (133 of them null variables) and 5414 cases (not counting the header row):
