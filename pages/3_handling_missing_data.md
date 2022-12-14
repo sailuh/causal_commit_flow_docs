@@ -77,7 +77,7 @@ Finally, the statistics variables `(code_dev,file,commit,churn)` and `(mail_dev,
 
 We decided to omit the missing data code, as it requires further explanation on variable renaming due to software limitations, and since the missing patterns were already known. 
 
- ## 3.2 Missing Data Transformations
+## 3.2 Missing Data Transformations
 
 With respect to the absence of data during 2000-2001, about 17% of the rows (Patterns 2 and 4 in the Mplus table above) suffered missing values due to the loss of the mailing log (907 + 227 cases). Developers were presumably communicating during the time period but there is no data on such communication. We decided to remove rows from the dataset for which the mailing list data source is missing (i.e. 2000-2001). 
 
