@@ -28,7 +28,7 @@ The Data Dictionary is separated in 3 tables for clarity, however it represents 
 | end_day | 	90 days after the start_day	| Deleted due to deterministic relationship with start_day |
 
 
-### 2.2 Social Smell Variables
+### 2.2 Socio-Technical Smell Variables
 
 The next three variables (org_silo, missing_links, and radio_silence) represent “social smells”, as defined in Kaiaulu's Notebook. 
 
