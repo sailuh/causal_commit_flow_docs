@@ -88,7 +88,7 @@ Inside the Search box, configure the search as follows:
     * A reminder that information about causal discovery (a.k.a., “search”), the Tetrad tool (Tetrad GUI), and search algorithm settings are found in the Tetrad User Manual cited above.
     * One of the default settings is to include the original dataset as an n+1-th bootstrap sample, and so in our case here, there are actually 11 searches.
 
-Here are screenshots of the search hyperparameter settings (Tetrad version 7.1.2-2):
+Here are screenshots of the search hyperparameter settings (Tetrad version 7.1.2-2, specifically tetrad-gui-7.1.2-2-launch.jar):
 
 ![Section 8 Figure 2](../img/sec_8_null_variable_prior_to_bootstrap_fig_2.png?raw=true "Title")
 
