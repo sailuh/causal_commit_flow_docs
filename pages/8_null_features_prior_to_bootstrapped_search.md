@@ -9,7 +9,9 @@ nav_order: 8
 
 ### 8.1 Null Features
 
-When a dataset doesn’t have too many features, we usually create one null feature for each existing feature; however, with 133 features, a bootstrapped search could become prohibitively time expensive, including its results interpretation. Therefore, we will generate null features for only a subset of the original features. But which subset? Taking inventory of our features, we have 133 features: 
+Null features are introduced into a dataset prior to bootstrapped search in order to determine the impact that [spurious correlations](https://web.archive.org/web/20190925212058/http:/www.burns.com/wcbspurcorl.htm) have on the formation of casual edges. To calibrate the dataset to “subtract” the influence of such spurious correlations, we introduce independently pseudo-randomized versions of each feature in the original dataset (“null features”) into the dataset and record how often edges form between each pair of variables in the combined dataset during bootstrapped search. Edges that form between a pair of original features more frequently, say, than 95% of the edges that form between a null feature and any other feature in the dataset can be kept but all other edges should be dropped from the graph \[1,2\]. In this way, we only report those edges that are much more likely to reflect true causal associations and not spurious correlations.
+
+When a dataset has only a few features, it is easy to create one null feature for each existing feature; however, with 133 features, a bootstrapped search could become prohibitively time expensive, including its results interpretation. Therefore, we will generate null features for only a subset of the original features. But which subset? Taking inventory of our features, we have 133 features: 
 
  * Start feature (the date when a time period started)
  * Set of 9 sociotechnical and output features for the current time period 
@@ -20,7 +22,7 @@ We will create a null feature for each of the first 19 features but only a small
 
 First, we conduct an initial screen to divide CVEs into two subsets: (1) those CVEs that seem to have no notable causally idiosyncratic role (their causal relationship to socio-technical features and worker-rate features seems about the same as most other CVEs)—for such features we won’t bother to generate a null feature as there’s perhaps nothing too unique going on that’s notably different from any other CVE from a causal perspective and thus not much to be gained from creating a corresponding null feature; and (2) those CVEs that do seem to be causally interesting and different from the others.
 
-Toward splitting the CVEs in the above-described way, we perform an initial screen. This initial screening will also involve bootstrapping but here the intent is just to give multiple chances for a causal edge to appear with the binarized (CVE id) feature representing that CVE. For example, we might perform Causal Discovery with bootstrapping set to just 10 samples, and then drop any feature that fails to have any edge whatsoever in this quick search across 10 samples. Before presenting the results of this, we backup to discuss the tool being used.
+Toward splitting the CVEs in the above-described way, we perform an initial screen. This initial screening will also involve bootstrapping but here the intent is just to give multiple chances for a causal edge to appear with the binarized (CVE id) feature representing that CVE. For example, we might perform Causal Discovery with bootstrapping set to just 10 samples, and then drop any feature that fails to have any edge whatsoever in this quick search across 10 samples. Before presenting the results of this, we backup to discuss the tool being usedfor bootstrapped search.
 
 ### 8.2. Tetrad
 
@@ -130,3 +132,6 @@ Here is the resulting dataset, with its 266 variables (133 of them null variable
 
 Notice that in the above, we simplified the filename greatly.
 
+\[1\] A. Hira, J. Alstad, and M. Konrad, “Investigating causal effects of software and systems engineering effort,” in Joint Software and IT-Cost Forum 2020.
+
+\[2\] Fattaneh Jabbari, Mahdi Pakdaman Naeini, and Gregory Cooper. 2017. “Obtaining Accurate Probabilistic Causal Inference by Post-Processing Calibration.” In NIPS 2017 Workshop on Causal Inference and Machine Learning.
