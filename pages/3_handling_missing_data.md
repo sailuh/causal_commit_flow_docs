@@ -5,6 +5,9 @@ parent: Home
 nav_order: 3
 ---
 
+# 3. Handling Missing Data
+
+In this section, we discuss the different missing data patterns.
 
 ## 3.1 Missing Data Patterns
 
