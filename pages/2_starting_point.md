@@ -41,7 +41,7 @@ The next three variables (org_silo, missing_links, and radio_silence) represent 
 | st_congruence (H) |	Short for “Socio-technical congruence.” A single continuous measure of overall similarity between collaboration graph and the file graph. <br /> <br /> Scale from 0..1 (1 means perfect congruence). |	Renamed “congruence” for brevity | 
 | Communicability (I) |	A continuous measure of the diffusion of information. How likely is it that an architectural decision is known by the set of developers that need to know about it. <br /> <br /> Scale from 0..1 (1 means perfect communicability). Is the inverse of incommunicability. |	Renamed “communicate” for brevity | 
 
-### 2.3 Statistics Variables 
+### 2.3 Work-Rate Variables 
 
 | Variable| Definition |	Derived Variable (i.e. Feature) |
 |-------------------|------------|----------------------------------------------------------------|
