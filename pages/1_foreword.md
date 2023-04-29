@@ -8,15 +8,22 @@ nav_order: 1
 
 ## 1. Foreword
 
-The intent of this document is to provide instructions for the replication of the study described in “A Socio-technical Perspective on Software Vulnerabilities: A Causal Analysis” hereafter called the “Original Study.”
+The intent of this document is to provide instructions for the replication of the study described in “A Socio-technical Perspective on Software Vulnerabilities: A Causal Analysis” hereafter called the “Original Study.” 
+
+This suplemental material primarily discusses the causal modelling method in greater detail. However, the analysis pipeline and method begins utilizing the Issue Commit Flow described in [Kaiaulu's R Notebook](https://github.com/sailuh/kaiaulu/blob/master/vignettes/issue_social_smell_showcase.Rmd). More specifically, the Notebook provides both tool and reproducible R Notebook. 
+
+While the git log of OpenSSL is readily available, an update to Google Groups interface no longer allows for downloading the OpenSSL mailing list discussion as .mbox, which is required for the analysis. Due to that, we provide the dataset in [Zenodo](https://zenodo.org/record/7785208). Moreover, since the Causal Analysis is performed as a collection of Excel, Python scripts, and Tetrad GUI, we also provide intermediate analysis files to aid in clarity for reproducibility.
+
+Finally, the qualitative analysis in the paper provides several supportiving evidence material as acronyms. The hyperlinks to the supporting evidence can be found in the Appendix section A.2. of this supplemental material.
+
+
+## 1.1 Why do Causal Discovery and Causal Inference?
 
 Given the non-determinism of search algorithms provided in our primary tool for Causal Discovery, Tetrad [see references in original study], we would not expect a replication to provide detailed results identical to those obtained for the original study; however, in the two years since the original study, the software stack underlying the original study results has itself changed, and thus even greater divergence might be expected. In particular, the Tetrad tool has gone through several versions from a pre-release of 6.8.0 (August 2020) used in the study to 7.1.2-2 (November 2022), the latest publicly-available release as we write this replication package. That two-year old pre-release is no longer publicly available and thus we ended up having to replicate our own study with Tetrad version 7.1.2-2 during which the main search algorithm used, Fast and Greedy Equivalent Search (FGES), has evolved somewhat as has the user interface to Tetrad and some of the features of the tool we employed (affecting screenshots created two years ago).
 
 We thus had an opportunity to follow our own replication package but with a newer version of the main tool used. What we learned was this: the details will change (e.g., which specific social smells in the current time period affect which specific work-rate variables in the next time period) but the overall conclusions documented at the end of our study still hold, in particular, quoting from the study’s conclusions:
 
 > “results: …social smells are indeed important factors that mediate significant project outcomes in terms of the incidence of and the effort associated with security vulnerabilities.”
-
-## 1.1 Why do Causal Discovery and Causal Inference?
 
 Causal inference has entered the research methodology discourse in fields as diverse as Econometrics and Epidemiology; and indeed, almost all leading and significant research in these two fields is now conducted in this more rigorous setting.
 
