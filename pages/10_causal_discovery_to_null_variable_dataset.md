@@ -5,10 +5,11 @@ parent: Home
 nav_order: 10
 ---
 
-
-## 10.1 Apply Causal Discovery (Bootstrapped Search) to the Dataset Expanded with Null Variables
+# 10. Causal Discovery to Null Variable Dataset 
 
 Now that we have a Knowledge Box with what seems a reasonable set of constraints (edges cannot form from variables in the next time period into variables in the current time period), we conduct our search. 
+
+## 10.1 Apply Causal Discovery (Bootstrapped Search) to the Dataset Expanded with Null Variables
 
 The settings in the Search box are set as follows, which generally are the same as for our pre-null variable-injected search but this time performed on the 175-variable and 5414-case dataset:
 
