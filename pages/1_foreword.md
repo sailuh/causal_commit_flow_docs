@@ -6,7 +6,7 @@ nav_order: 1
 ---
 
 
-## 1.1 Foreword
+## 1. Foreword
 
 The intent of this document is to provide instructions for the replication of the study described in “A Socio-technical Perspective on Software Vulnerabilities: A Causal Analysis” hereafter called the “Original Study.”
 
@@ -16,7 +16,7 @@ We thus had an opportunity to follow our own replication package but with a newe
 
 > “results: …social smells are indeed important factors that mediate significant project outcomes in terms of the incidence of and the effort associated with security vulnerabilities.”
 
-## 1.2 Why do Causal Discovery and Causal Inference?
+## 1.1 Why do Causal Discovery and Causal Inference?
 
 Causal inference has entered the research methodology discourse in fields as diverse as Econometrics and Epidemiology; and indeed, almost all leading and significant research in these two fields is now conducted in this more rigorous setting.
 
@@ -37,7 +37,7 @@ Continuing on our answer to “why causal discovery/inference:”
 
 And for these reasons, we employed Causal Discovery in our analysis of the OpenSSL dataset.
 
-## 1.3 References
+## 1.2 References
 
 1. Muthén, L. K., & Muthén, B. O. (1998-2017). Mplus User's Guide. Eighth Edition. Los Angeles, CA: Muthén & Muthén.))
 2. American Journal of Epidemiology, 2021. “100 Years of the American Journal of Epidemiology.” 100 years, American Journal of Epidemiology, Oxford Academic (oup.com)
